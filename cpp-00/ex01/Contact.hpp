@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 01:13:01 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/06 06:21:40 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/07 00:49:29 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ class Contact
         std::string _phone_number;
         std::string _darkest_secret;
         std::string _get_input(std::string msg);
+        std::string _str_max_10(std::string str);
         
     public:
         Contact();
         ~Contact();
         void _new_contact(int index);
         void _display_contact();
+        void _display_basic();
 };
 
 #endif

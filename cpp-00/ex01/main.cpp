@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 00:53:18 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/06 08:01:26 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/07 00:33:07 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void)
         else if (input.compare("SEARCH") == 0 && input.size() == 6)
             PB.search();
         std::cout << "PhoneBook -> " << std::flush;
-        std::cin >> input;
+        std::getline(std::cin, input);
     }
     return (0);
 }
