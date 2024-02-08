@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 08:18:25 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 01:13:06 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/08 07:09:30 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/08 07:36:21 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # ifndef IOSTREAM_INCLUDED
 #  define IOSTREAM_INCLUDED
 #  include <iostream>
 # endif
 
-class   Harl
+class   ClapTrap
 {
     private:
-        void    debug();
-        void    info();
-        void    warning();
-        void    error();
+        std::string _name;
+        int _hit_points;
+        int _energy_points;
+        int _attack_damage;
     public:
-        Harl();
-        ~Harl();
-        void    complain(std::string level);
+        ClapTrap(std::string name);
+        ClapTrap(const ClapTrap& cpy);
+        ClapTrap& operator=(const ClapTrap& cpy);
+        ~ClapTrap();
+        
+        void attack(const std::string& target);
+        void takeDamage(unsigned int amount);
+        void beRepaired(unsigned int amount);
 };
 
 #endif

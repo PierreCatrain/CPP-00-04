@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 08:18:25 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 01:13:06 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/08 05:29:31 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/08 07:01:07 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Fixed.hpp"
 
-# ifndef IOSTREAM_INCLUDED
-#  define IOSTREAM_INCLUDED
-#  include <iostream>
-# endif
-
-class   Harl
+int main(void)
 {
-    private:
-        void    debug();
-        void    info();
-        void    warning();
-        void    error();
-    public:
-        Harl();
-        ~Harl();
-        void    complain(std::string level);
-};
-
-#endif
+    Fixed a;
+    Fixed const b(Fixed(5.05f) * Fixed(2));
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << Fixed::max(a, b) << std::endl;
+    return (0);
+}

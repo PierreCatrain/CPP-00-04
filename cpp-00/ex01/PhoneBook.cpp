@@ -6,13 +6,11 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 01:12:39 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/07 00:56:41 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/08 01:03:04 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <sstream>
-#include <iomanip>
 
 PhoneBook::PhoneBook(int nb) : _nb_contact(nb)
 {

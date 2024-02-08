@@ -6,14 +6,17 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 02:37:00 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/07 02:57:49 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/08 01:12:37 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
-#include <iostream>
+# ifndef IOSTREAM_INCLUDED
+#  define IOSTREAM_INCLUDED
+#  include <iostream>
+# endif
 
 class Zombie
 {

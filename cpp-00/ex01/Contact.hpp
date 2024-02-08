@@ -6,14 +6,17 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 01:13:01 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/07 00:49:29 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/08 01:10:34 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-#include <iostream>
+# ifndef IOSTREAM_INCLUDED
+#  define IOSTREAM_INCLUDED
+#  include <iostream>
+# endif
 
 class Contact
 {

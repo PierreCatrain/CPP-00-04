@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 08:18:25 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 01:13:06 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/08 01:30:04 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/08 06:20:30 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 # ifndef IOSTREAM_INCLUDED
 #  define IOSTREAM_INCLUDED
 #  include <iostream>
 # endif
 
-class   Harl
+class   Fixed
 {
     private:
-        void    debug();
-        void    info();
-        void    warning();
-        void    error();
+        int _RawBits;
+        static const int _FractBits = 8;
     public:
-        Harl();
-        ~Harl();
-        void    complain(std::string level);
+        Fixed();
+        Fixed(Fixed& cpy);
+        ~Fixed();
+        Fixed& operator=(Fixed& cpy);
+
+        void setRawBits(int const raw);
+        int getRawBits();
 };
 
 #endif

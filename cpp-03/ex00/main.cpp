@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 08:18:25 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 01:13:06 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/08 07:08:37 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/08 07:26:54 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "ClapTrap.hpp"
 
-# ifndef IOSTREAM_INCLUDED
-#  define IOSTREAM_INCLUDED
-#  include <iostream>
-# endif
-
-class   Harl
+int main(void)
 {
-    private:
-        void    debug();
-        void    info();
-        void    warning();
-        void    error();
-    public:
-        Harl();
-        ~Harl();
-        void    complain(std::string level);
-};
-
-#endif
+    return (0);
+}

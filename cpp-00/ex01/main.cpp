@@ -6,12 +6,10 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 00:53:18 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/07 00:33:07 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/08 01:04:10 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <stdio.h>
 #include "PhoneBook.hpp"
 
 int main(void)
