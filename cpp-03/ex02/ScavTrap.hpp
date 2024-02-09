@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 07:09:30 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 23:23:45 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 01:09:53 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 01:11:00 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # ifndef IOSTREAM_INCLUDED
 #  define IOSTREAM_INCLUDED
 #  include <iostream>
 # endif
 
-class   ClapTrap
+# ifndef CLAPTRAP_HPP_INCLUDED
+#  define CLAPTRAP_HPP_INCLUDED
+#  include "ClapTrap.hpp"
+# endif
+
+class   ScavTrap : public ClapTrap
 {
     private:
-        std::string _name;
-        int _hit_points;
-        int _energy_points;
-        int _attack_damage;
+        
     public:
-        ClapTrap();
-        ClapTrap(std::string name);
-        ClapTrap(const ClapTrap& cpy);
-        ClapTrap& operator=(const ClapTrap& cpy);
-        ~ClapTrap();
+        ScavTrap();
+        ScavTrap(std::string name);
+        ScavTrap(const ScavTrap& cpy);
+        ScavTrap& operator=(const ScavTrap& cpy);
+        ~ScavTrap();
         
         void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
+        void guardGate();
 };
 
 #endif

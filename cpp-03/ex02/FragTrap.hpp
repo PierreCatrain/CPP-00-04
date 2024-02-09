@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 07:09:30 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 23:23:45 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 01:12:29 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 01:36:00 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # ifndef IOSTREAM_INCLUDED
 #  define IOSTREAM_INCLUDED
 #  include <iostream>
 # endif
 
-class   ClapTrap
+# ifndef CLAPTRAP_HPP_INCLUDED
+#  define CLAPTRAP_HPP_INCLUDED
+#  include "ClapTrap.hpp"
+# endif
+
+class   FragTrap : public ClapTrap
 {
     private:
-        std::string _name;
-        int _hit_points;
-        int _energy_points;
-        int _attack_damage;
+
     public:
-        ClapTrap();
-        ClapTrap(std::string name);
-        ClapTrap(const ClapTrap& cpy);
-        ClapTrap& operator=(const ClapTrap& cpy);
-        ~ClapTrap();
-        
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
+        FragTrap();
+        FragTrap(std::string name);
+        FragTrap(const FragTrap& cpy);
+        FragTrap& operator=(const FragTrap& cpy);
+        ~FragTrap();
+
+        void highFivesGuys(void);
 };
 
 #endif

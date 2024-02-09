@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 07:09:30 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 23:23:45 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 01:09:26 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 01:11:22 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class   ClapTrap
 {
-    private:
+    protected:
         std::string _name;
         int _hit_points;
         int _energy_points;

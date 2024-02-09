@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 07:08:37 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 23:39:03 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 02:29:06 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 02:31:18 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int main(void)
+# ifndef ANIMAL_HPP_INCLUDED
+#  define ANIMAL_HPP_INCLUDED
+#  include "Animal.hpp"
+# endif
+
+class   Cat : public Animal
 {
-    ClapTrap t1("T1");
-    ClapTrap t2("T2");
+    public:
+        Cat();
+        Cat(const Cat& cpy);
+        Cat& operator=(const Cat& cpy);
+        ~Cat();
+};
 
-    std::cout << std::endl;
-    
-    t1.attack("T2");
-    t2.beRepaired(2);
-    t1.takeDamage(6);
-    t1.takeDamage(6);
-    t1.takeDamage(6);
-
-    std::cout << std::endl;
-    
-    return (0);
-}
+# endif

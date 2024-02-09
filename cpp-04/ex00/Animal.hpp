@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 07:09:30 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 23:23:45 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 01:50:30 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 02:55:39 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 # ifndef IOSTREAM_INCLUDED
 #  define IOSTREAM_INCLUDED
 #  include <iostream>
 # endif
 
-class   ClapTrap
+class   Animal
 {
-    private:
-        std::string _name;
-        int _hit_points;
-        int _energy_points;
-        int _attack_damage;
+    protected:
+        std::string _type;
     public:
-        ClapTrap();
-        ClapTrap(std::string name);
-        ClapTrap(const ClapTrap& cpy);
-        ClapTrap& operator=(const ClapTrap& cpy);
-        ~ClapTrap();
+        Animal();
+        Animal(std::string type);
+        Animal(const Animal& cpy);
+        Animal& operator=(const Animal& cpy);
+        ~Animal();
         
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
+        void setType(std::string type);
+        std::string getType() const;
+        void    makeSound() const;
 };
 
 #endif

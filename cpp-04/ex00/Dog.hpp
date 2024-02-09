@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 07:08:37 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 23:39:03 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 02:20:17 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 02:30:00 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main(void)
+# ifndef ANIMAL_HPP_INCLUDED
+#  define ANIMAL_HPP_INCLUDED
+#  include "Animal.hpp"
+# endif
+
+class   Dog : public Animal
 {
-    ClapTrap t1("T1");
-    ClapTrap t2("T2");
+    public:
+        Dog();
+        Dog(const Dog& cpy);
+        Dog& operator=(const Dog& cpy);
+        ~Dog();
+};
 
-    std::cout << std::endl;
-    
-    t1.attack("T2");
-    t2.beRepaired(2);
-    t1.takeDamage(6);
-    t1.takeDamage(6);
-    t1.takeDamage(6);
-
-    std::cout << std::endl;
-    
-    return (0);
-}
+# endif
