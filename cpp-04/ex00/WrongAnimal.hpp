@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 01:50:30 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 05:16:33 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 05:18:05 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 05:21:50 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # ifndef IOSTREAM_INCLUDED
 #  define IOSTREAM_INCLUDED
 #  include <iostream>
 # endif
 
-class   Animal
+class   WrongAnimal
 {
     protected:
         std::string _type;
     public:
-        Animal();
-        Animal(std::string type);
-        Animal(const Animal& cpy);
-        Animal& operator=(const Animal& cpy);
-        virtual ~Animal();
+        WrongAnimal();
+        WrongAnimal(std::string type);
+        WrongAnimal(const WrongAnimal& cpy);
+        WrongAnimal& operator=(const WrongAnimal& cpy);
+        virtual ~WrongAnimal();
         
         void setType(std::string type);
         std::string getType() const;

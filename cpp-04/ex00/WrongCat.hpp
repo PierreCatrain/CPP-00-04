@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 00:10:06 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 06:40:46 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 05:23:50 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 05:25:09 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-int	main(int argc, char **argv)
+# ifndef WRONGANIMAL_HPP_INCLUDED
+#  define WRONGANIMAL_HPP_INCLUDED
+#  include "WrongAnimal.hpp"
+# endif
+
+class   WrongCat : public WrongAnimal
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else
-    {
-		for (int i = 1; argv[i]; i++)
-        {
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char)toupper(argv[i][j]);
-			if (i < argc - 1)
-				std::cout << ' ';
-		}
-	}
-	std::cout << std::endl;
-	return (0);
-}
+    public:
+        WrongCat();
+        WrongCat(const WrongCat& cpy);
+        WrongCat& operator=(const WrongCat& cpy);
+        ~WrongCat();
+};
+
+# endif

@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 00:10:06 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 06:40:46 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/09 05:38:01 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/09 06:09:32 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int	main(int argc, char **argv)
+# ifndef ANIMAL_HPP_INCLUDED
+#  define ANIMAL_HPP_INCLUDED
+#  include "Animal.hpp"
+# endif
+
+# ifndef BRAIN_HPP_INCLUDED
+#  define BRAIN_HPP_INCLUDED
+#  include "Brain.hpp"
+# endif
+
+class   Cat : public Animal
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else
-    {
-		for (int i = 1; argv[i]; i++)
-        {
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char)toupper(argv[i][j]);
-			if (i < argc - 1)
-				std::cout << ' ';
-		}
-	}
-	std::cout << std::endl;
-	return (0);
-}
+    private:
+        Brain* brain;
+    public:
+        Cat();
+        Cat(const Cat& cpy);
+        Cat& operator=(const Cat& cpy);
+        ~Cat();
+};
+
+# endif
