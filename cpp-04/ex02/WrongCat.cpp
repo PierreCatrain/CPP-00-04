@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 05:39:52 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/10 01:34:34 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/10 01:13:34 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/10 02:00:55 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,4 @@ WrongCat& WrongCat::operator=(const WrongCat& cpy)
 WrongCat::~WrongCat(void)
 {
     std::cout << "WrongCat's destructor has been called" << std::endl;
-}
-
-void WrongCat::makeSound(void) const
-{
-    std::cout << "WrongMiaou" << std::endl;
 }

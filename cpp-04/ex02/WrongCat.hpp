@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 05:38:01 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/10 01:36:10 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/10 01:13:13 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/10 01:41:41 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# ifndef ANIMAL_HPP_INCLUDED
-#  define ANIMAL_HPP_INCLUDED
-#  include "Animal.hpp"
+# ifndef WRONGANIMAL_HPP_INCLUDED
+#  define WRONGANIMAL_HPP_INCLUDED
+#  include "WrongAnimal.hpp"
 # endif
 
-# ifndef BRAIN_HPP_INCLUDED
-#  define BRAIN_HPP_INCLUDED
-#  include "Brain.hpp"
-# endif
-
-class   Cat : public Animal
+class   WrongCat : public WrongAnimal
 {
-    private:
-        Brain* brain;
     public:
-        Cat();
-        Cat(const Cat& cpy);
-        Cat& operator=(const Cat& cpy);
-        ~Cat();
+        WrongCat();
+        WrongCat(const WrongCat& cpy);
+        WrongCat& operator=(const WrongCat& cpy);
+        ~WrongCat();
 
         void makeSound() const;
-        Brain* getBrain();
 };
 
 # endif

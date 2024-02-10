@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:36:08 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 05:36:18 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:36:50 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,5 @@ std::string Animal::getType(void) const
 
 void Animal::makeSound(void) const
 {
-    if (this->_type == "Dog")
-        std::cout << "Wouaf" << std::endl;
-    else if (this->_type == "Cat")
-        std::cout << "Miaou" << std::endl;
-    else
-        std::cout << "Default animal sound" << std::endl;
+    std::cout << "Default animal sound" << std::endl;
 }

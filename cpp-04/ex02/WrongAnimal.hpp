@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 05:37:31 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/10 01:34:57 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/10 01:12:43 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/10 01:57:20 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class   WrongAnimal
         
         void setType(std::string type);
         std::string getType() const;
-        virtual void    makeSound() const;
+        virtual void    makeSound() const = 0;
 };
 
 #endif

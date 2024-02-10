@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 02:20:05 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 02:46:59 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:29:25 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ Dog& Dog::operator=(const Dog& cpy)
 Dog::~Dog(void)
 {
     std::cout << "Dog's destructor has been called" << std::endl;
+}
+
+void Dog::makeSound(void) const
+{
+    std::cout << "Wouaf" << std::endl;
 }

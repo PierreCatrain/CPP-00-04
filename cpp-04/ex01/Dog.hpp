@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:38:52 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 06:25:48 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:35:38 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class   Dog : public Animal
         Dog& operator=(const Dog& cpy);
         ~Dog();
 
+        void makeSound() const;
         Brain* getBrain();
 };
 

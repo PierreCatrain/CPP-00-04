@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:23:41 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 05:26:35 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:30:23 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ WrongCat& WrongCat::operator=(const WrongCat& cpy)
 WrongCat::~WrongCat(void)
 {
     std::cout << "WrongCat's destructor has been called" << std::endl;
+}
+
+void WrongCat::makeSound(void) const
+{
+    std::cout << "WrongMiaou" << std::endl;
 }

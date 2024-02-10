@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:23:50 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 05:25:09 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:30:52 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class   WrongCat : public WrongAnimal
         WrongCat(const WrongCat& cpy);
         WrongCat& operator=(const WrongCat& cpy);
         ~WrongCat();
+
+        void makeSound() const;
 };
 
 # endif

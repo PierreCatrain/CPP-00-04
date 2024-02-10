@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 01:50:21 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/10 01:28:24 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/10 01:09:06 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/10 01:48:24 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,4 @@ void Animal::setType(std::string type)
 std::string Animal::getType(void) const
 {
     return (this->_type);
-}
-
-void Animal::makeSound(void) const
-{
-    std::cout << "Default animal sound" << std::endl;
 }

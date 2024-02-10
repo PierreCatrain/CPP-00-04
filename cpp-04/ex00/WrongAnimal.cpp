@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:17:55 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 05:27:48 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:31:18 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,5 @@ std::string WrongAnimal::getType(void) const
 
 void WrongAnimal::makeSound(void) const
 {
-    if (this->_type == "WrongCat")
-        std::cout << "WrongMiaou" << std::endl;
-    else
-        std::cout << "Default \"WrongAnimal\" sound" << std::endl;
+    std::cout << "Default \"WrongAnimal\" sound" << std::endl;
 }

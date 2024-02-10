@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:39:06 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 06:29:52 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:35:54 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,13 @@ Dog& Dog::operator=(const Dog& cpy)
 
 Dog::~Dog(void)
 {
-    delete this->brain;
     std::cout << "Dog's destructor has been called" << std::endl;
+    delete this->brain;
+}
+
+void Dog::makeSound(void) const
+{
+    std::cout << "Wouaf" << std::endl;
 }
 
 Brain* Dog::getBrain(void)

@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 02:29:06 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 02:31:18 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:29:48 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class   Cat : public Animal
         Cat(const Cat& cpy);
         Cat& operator=(const Cat& cpy);
         ~Cat();
+
+        void makeSound() const;
 };
 
 # endif

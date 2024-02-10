@@ -1,49 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 05:38:24 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/10 01:36:27 by picatrai         ###   ########.fr       */
+/*   Created: 2024/02/10 01:11:39 by picatrai          #+#    #+#             */
+/*   Updated: 2024/02/10 01:42:20 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat(void) : Animal("Cat")
+Dog::Dog(void) : Animal("Dog")
 {
     this->brain = new Brain;
-    std::cout << "Cat's constructor has been called" << std::endl;
+    std::cout << "Dog's constructor has been called" << std::endl;
 }
 
-Cat::Cat(const Cat& cpy)
+Dog::Dog(const Dog& cpy)
 {
     *this = cpy;
-    std::cout << "Cat's copy has been completed" << std::endl;
+    std::cout << "Dog's copy has been completed" << std::endl;
 }
 
-Cat& Cat::operator=(const Cat& cpy)
+Dog& Dog::operator=(const Dog& cpy)
 {
     *this->brain = *cpy.brain;
     this->_type = cpy._type;
-    std::cout << "Cat's egal assignation has been completed" << std::endl;
+    std::cout << "Dog's egal assignation has been completed" << std::endl;
     return (*this);
 }
 
-Cat::~Cat(void)
+Dog::~Dog(void)
 {
-    std::cout << "Cat's destructor has been called" << std::endl;
+    std::cout << "Dog's destructor has been called" << std::endl;
     delete this->brain;
 }
 
-void Cat::makeSound(void) const
+void Dog::makeSound(void) const
 {
-    std::cout << "Miaou" << std::endl;
+    std::cout << "Wouaf" << std::endl;
 }
 
-Brain* Cat::getBrain(void)
+Brain* Dog::getBrain(void)
 {
     return (this->brain);
 }

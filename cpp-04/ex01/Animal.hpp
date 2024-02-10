@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 05:36:27 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/09 05:36:37 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:36:40 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class   Animal
         
         void setType(std::string type);
         std::string getType() const;
-        void    makeSound() const;
+        virtual void    makeSound() const;
 };
 
 #endif
