@@ -6,13 +6,14 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 01:12:27 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/07 00:57:32 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:49:00 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include <iostream>
 #include <iomanip>
+#include <stdlib.h>
 
 Contact::Contact(void)
 {
@@ -43,8 +44,9 @@ std::string Contact::_get_input(std::string msg)
     while (good)
     {
         std::cout << msg;
-        std::getline(std::cin, input);
-        if (input.size() == 0)
+        if (!std::getline(std::cin, input))
+            exit(2);
+        if (input.size() == 0 || this->_is_input_valid(input) == false)
             std::cout << "Invalid input, please enter a correct information" << std::endl;
         else
             good = 0;
@@ -76,6 +78,75 @@ void Contact::_display_basic(void)
 std::string Contact::_str_max_10(std::string str)
 {
     if (str.length() > 10)
-        return str.substr(0, 9) + ".";
-    return str;
+        return (str.substr(0, 9) + ".");
+    return (str);
+}
+
+bool Contact::_is_input_valid(std::string input)
+{
+    if (input.find("\x1b[A") <= input.length() || input.find("\x1b[B") <= input.length() || input.find("\x1b[C") <= input.length())
+        return (false);
+    else if (input.find("\x1b[D") <= input.length() || input.find("\t") <= input.length())
+        return (false);
+    return (true);
+}
+
+void Contact::setIndex(const int new_index)
+{
+    index = new_index;
+}
+
+void Contact::setFirstName(const std::string& first_name)
+{
+    _first_name = first_name;
+}
+
+void Contact::setLastName(const std::string& last_name)
+{
+    _last_name = last_name;
+}
+
+void Contact::setNickname(const std::string& nickname)
+{
+    _nickname = nickname;
+}
+
+void Contact::setPhoneNumber(const std::string& phone_number)
+{
+    _phone_number = phone_number;
+}
+
+void Contact::setDarkestSecret(const std::string& darkest_secret)
+{
+    _darkest_secret = darkest_secret;
+}
+
+int Contact::getIndex() const
+{
+    return (index);
+}
+
+std::string Contact::getFirstName() const
+{
+    return (_first_name);
+}
+
+std::string Contact::getLastName() const
+{
+    return (_last_name);
+}
+
+std::string Contact::getNickname() const
+{
+    return (_nickname);
+}
+
+std::string Contact::getPhoneNumber() const
+{
+    return (_phone_number);
+}
+
+std::string Contact::getDarkestSecret() const
+{
+    return (_darkest_secret);
 }
