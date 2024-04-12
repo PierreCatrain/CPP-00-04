@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 01:30:04 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 06:20:30 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/04/12 04:32:45 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class   Fixed
         Fixed& operator=(Fixed& cpy);
 
         void setRawBits(int const raw);
-        int getRawBits();
+        int getRawBits() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 05:27:50 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 06:56:56 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/04/12 06:42:03 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,19 @@ int Fixed::getRawBits(void) const
     return (this->_RawBits);
 }
 
-float   Fixed::convert_float(void) const
+float   Fixed::toFloat(void) const
 {
     return ((float)this->_RawBits / (1 << Fixed::_FractBits));
 }
 
 int Fixed::toInt(void) const
 {
-    return this->_RawBits >> Fixed::_FractBits;
+    return (this->_RawBits >> Fixed::_FractBits);
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed& obj)
 {
-	os << obj.convert_float();
+	os << obj.toFloat();
 	return (os);
 }
 
@@ -82,42 +82,42 @@ std::ostream &operator<<(std::ostream &os, const Fixed& obj)
 
 bool    Fixed::operator>(const Fixed& opp)
 {
-    if (this->convert_float() > opp.convert_float())
+    if (this->toFloat() > opp.toFloat())
         return (true);
     return (false);
 }
 
 bool    Fixed::operator<(const Fixed& opp)
 {
-    if (this->convert_float() < opp.convert_float())
+    if (this->toFloat() < opp.toFloat())
         return (true);
     return (false);
 }
 
 bool    Fixed::operator>=(const Fixed& opp)
 {
-    if (this->convert_float() >= opp.convert_float())
+    if (this->toFloat() >= opp.toFloat())
         return (true);
     return (false);
 }
 
 bool    Fixed::operator<=(const Fixed& opp)
 {
-    if (this->convert_float() <= opp.convert_float())
+    if (this->toFloat() <= opp.toFloat())
         return (true);
     return (false);
 }
 
 bool    Fixed::operator==(const Fixed& opp)
 {
-    if (this->convert_float() == opp.convert_float())
+    if (this->toFloat() == opp.toFloat())
         return (true);
     return (false);
 }
 
 bool    Fixed::operator!=(const Fixed& opp)
 {
-    if (this->convert_float() != opp.convert_float())
+    if (this->toFloat() != opp.toFloat())
         return (true);
     return (false);
 }
@@ -131,25 +131,25 @@ bool    Fixed::operator!=(const Fixed& opp)
 
 Fixed Fixed::operator+(const Fixed& opp)
 {
-    Fixed res (this->convert_float() + opp.convert_float());
+    Fixed res (this->toFloat() + opp.toFloat());
     return (res);
 }
 
 Fixed Fixed::operator-(const Fixed& opp)
 {
-    Fixed res (this->convert_float() - opp.convert_float());
+    Fixed res (this->toFloat() - opp.toFloat());
     return (res);
 }
 
 Fixed Fixed::operator*(const Fixed& opp)
 {
-    Fixed res (this->convert_float() * opp.convert_float());
+    Fixed res (this->toFloat() * opp.toFloat());
     return (res);
 }
 
 Fixed Fixed::operator/(const Fixed& opp)
 {
-    Fixed res (this->convert_float() / opp.convert_float());
+    Fixed res (this->toFloat() / opp.toFloat());
     return (res);
 }
 
@@ -190,28 +190,28 @@ Fixed Fixed::operator--(int)
 
 Fixed Fixed::min(Fixed& f1, Fixed& f2)
 {
-    if (f1.convert_float() < f2.convert_float())
+    if (f1.toFloat() < f2.toFloat())
         return (f1);
     return (f2);
 }
 
 Fixed Fixed::min(const Fixed& f1, const Fixed& f2)
 {
-    if (f1.convert_float() < f2.convert_float())
+    if (f1.toFloat() < f2.toFloat())
         return (f1);
     return (f2);
 }
 
 Fixed Fixed::max(Fixed& f1, Fixed& f2)
 {
-    if (f1.convert_float() > f2.convert_float())
+    if (f1.toFloat() > f2.toFloat())
         return (f1);
     return (f2);
 }
 
 Fixed Fixed::max(const Fixed& f1, const Fixed& f2)
 {
-    if (f1.convert_float() > f2.convert_float())
+    if (f1.toFloat() > f2.toFloat())
         return (f1);
     return (f2);
 }

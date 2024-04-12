@@ -6,7 +6,7 @@
 /*   By: picatrai <picatrai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 01:29:41 by picatrai          #+#    #+#             */
-/*   Updated: 2024/02/08 06:19:53 by picatrai         ###   ########.fr       */
+/*   Updated: 2024/04/12 04:32:39 by picatrai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void Fixed::setRawBits(int const raw)
     this->_RawBits = raw;
 }
 
-int Fixed::getRawBits(void)
+int Fixed::getRawBits(void) const
 {
     std::cout << "getRawBits member function called" << std::endl;
     return (this->_RawBits);
